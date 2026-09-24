@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda Tech | Eventos tecnológicos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Agenda Tech</a>
+    <nav>
+      <a href="#eventos">Eventos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Los eventos tecnológicos de los próximos meses, en un solo sitio</h1>
+        <p>Conferencias, talleres y meetups sobre IA, cloud, seguridad y desarrollo web. Filtra por tema y reserva tu plaza.</p>
+        <a class="btn" href="#eventos">Ver todos los eventos</a>
+      </div>
+
+      <aside class="ticket" aria-label="Próximo evento">
+        <p class="ticket-label">Próximo evento</p>
+        <h2 id="next-title">Cargando…</h2>
+        <p id="next-meta" class="ticket-meta"></p>
+        <div class="count" id="countdown" role="timer" aria-live="off">
+          <div><b id="c-d">0</b><span>días</span></div>
+          <div><b id="c-h">0</b><span>horas</span></div>
+          <div><b id="c-m">0</b><span>min</span></div>
+          <div><b id="c-s">0</b><span>seg</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="eventos" class="events">
+      <div class="controls">
+        <label class="search">
+          <span class="sr">Buscar evento o ciudad</span>
+          <input id="q" type="search" placeholder="Buscar por nombre o ciudad">
+        </label>
+        <div id="chips" class="chips" role="group" aria-label="Filtrar por tema"></div>
+      </div>
+
+      <p id="count" class="result-count" aria-live="polite"></p>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden>No hay eventos con esos filtros. Prueba con otro tema o borra la búsqueda.</p>
+    </section>
+  </main>
+
+  <footer id="contacto" class="footer">
+    <p>Agenda Tech · Proyecto de web estática alojada en AWS S3</p>
+    <p>¿Organizas un evento? Escríbenos a <a href="mailto:hola@agendatech.example">hola@agendatech.example</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
